@@ -30,7 +30,7 @@ Font Formating = clr.bold | clr.underline | clr.reversed
 
 |Code 					| Output|
 |-------------------------------	| -------------|
-`print(clr.red + "Red Color")`  	| <span style="color: red"> Red Color </span>
+print(clr.red + "Red Color")  	| <span style="color: red"> Red Color </span>
 `print(clr.yellow + "Yellow Color")` | <span style="color: Yellow"> Yellow Color </span>
 `print(clr.blue + "Blue Color")` | <span style="color: Blue"> Blue Color </span>
 `print(clr.green + "Green Color")` | <span style="color: green"> Green Color </span>
