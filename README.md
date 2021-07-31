@@ -30,19 +30,90 @@ Font Formating = clr.bold | clr.underline | clr.reversed
 
 |Code 					| Output|
 |-------------------------------	| -------------|
-print(clr.red + "Red Color")  	| <span style="color: red"> Red Color </span>
-`print(clr.yellow + "Yellow Color")` | <span style="color: Yellow"> Yellow Color </span>
-`print(clr.blue + "Blue Color")` | <span style="color: Blue"> Blue Color </span>
-`print(clr.green + "Green Color")` | <span style="color: green"> Green Color </span>
-`print(clr.magenta + "Magenta Color")` | <span style="color: magenta"> Magenta Color </span>
-`print(clr.black + "Black Color")` | <span style="color: black"> Black Color </span>
-`print(clr.white + "White Color")` | <span style="color: white"> White Color </span>
-`print(clr.bgRed + "Red Color")`  	| <span style="background-color: Red"> Background Color Red </span>
-`print(clr.bgYellow + "Yellow Background Color")` | <span style="background-color: Yellow">Yellow Background Color </span>
-`print(clr.bgBlue + "Blue Background Color")` | <span style="background-color: Blue">Yellow Background Color</span>
-`print(clr.bgGreen + "Green Background Color")` | <span style="background-color: Green">Green Background Color</span>
-`print(clr.black + "Black Background Color")` | <span style="background-color: Black">Black Background Color</span>
-`print(clr.white + "White Background Color")` | <span style="background-color: White">White Background Color</span>
-`print(clr.bold + "Font Style Bold")` | <span style="font-weight: bold;">Font Style Bold</span>
-`print(clr.underline + "Font Style Underline")` | <span style="text-decoration: underline">Font Style Underline</span>
-`print(clr.reversed + "Font Style Reversed")` | <span style="background-color:white; color:gray;">Font Style Reversed</span>
+`print(clr.red + "Red Color")` 	|  ![RedColor](https://www.linkpicture.com/q/red.png)
+`print(clr.yellow + "Yellow Color")` | ![YellowColor](https://www.linkpicture.com/q/yellow_1.png)
+`print(clr.blue + "Blue Color")` | ![BlueColor](https://www.linkpicture.com/q/blue.png)
+`print(clr.green + "Green Color")` | ![GreenColor](https://www.linkpicture.com/q/green_2.png)
+`print(clr.magenta + "Magenta Color")` | ![MagentaColor](https://www.linkpicture.com/q/green_3.png)
+`print(clr.black + "Black Color")` | ![BlackColor](https://www.linkpicture.com/q/2_395.png)
+`print(clr.white + "White Color")` | ![WhiteColor](https://www.linkpicture.com/q/1_656.png)
+`print(clr.bgRed + "Red Background Color")` | ![RedBgColor](https://www.linkpicture.com/q/2_397.png)
+`print(clr.bgYellow + "Yellow Background Color")` | ![YellowBgColor](https://www.linkpicture.com/q/3_254.png)
+`print(clr.bgBlue + "Blue Background Color")` | ![BlueBgColor](https://www.linkpicture.com/q/blue_1.png)
+`print(clr.bgGreen + "Green Background Color")` | ![GreenBgColor](https://www.linkpicture.com/q/green_4.png)
+`print(clr.black + "Black Background Color")` | ![BlackBgColor](https://www.linkpicture.com/q/black_4.png)
+`print(clr.white + "White Background Color")` | ![WhiteBgColor](https://www.linkpicture.com/q/white_14.png)
+`print(clr.bold + "Font Style Bold")` | ![FontStyleBold](https://www.linkpicture.com/q/bold.png)
+`print(clr.underline + "Font Style Underline")` | ![FontStyleUnderline](https://www.linkpicture.com/q/underline.png)
+`print(clr.reversed + "Font Style Reversed")` | ![FontStyleReversed](https://www.linkpicture.com/q/reversed.png)
+
+## 5-) setColor() and setBgClr() Methods
+```python
+text = clr.setColor(35)
+print(text + "SetColor"+reset)
+```
+> ### output _> 
+>> ![](https://www.linkpicture.com/q/reversed_1.png)
+
+```python
+#If you don't know the color numbers, you can call the getAllColor() method.
+clr.getAllColor()
+```
+> ### output2 _> 
+>> ![](https://www.linkpicture.com/q/Adsız_83.png)
+
+```python
+bgColor = clr.setBgClr(202)
+print(bgColor+"Background Color"+reset)
+```
+> ### output3 _> 
+>> ![](https://www.linkpicture.com/q/Adsız_84.png)
+
+```python
+#If you don't know the background color numbers, you can call the getAllBgColor() method.
+clr.getAllBgColor()
+```
+> ### output4 _> 
+>> ![](https://www.linkpicture.com/q/Adsız_86.png)
+
+## 6-) RGBSetClr() and RGBSetBgClr() Methods
+```python
+#Default RGB = "240;248;255" => Type(string) 
+
+color = clr.RGBSetClr("155;205;155")
+print(color+"RGBSetColor Method"+reset)
+```
+>### output Default _>
+>>![100](https://user-images.githubusercontent.com/70446049/127744773-2d930e24-d1f3-40f4-ba0a-36fe0875eac8.png)
+
+> ### output set color _>
+>>![200](https://user-images.githubusercontent.com/70446049/127744776-7f7a90f6-e90f-4d7f-bd08-5815d6aa8a74.png)
+
+```python
+# RGB Background Color
+#Default RGB = "240;248;255" => Type(string) 
+
+Bgcolor = clr.RGBSetBgClr("0;199;140") + clr.black
+print(Bgcolor+"RGBSetBgColor Method"+reset)
+```
+> ### output Default BG _>
+>>![100](https://user-images.githubusercontent.com/70446049/127745088-4ab002b5-77bc-46d4-abfa-b016bc218428.png)
+
+> ### output set BgColor _>
+>>![200](https://user-images.githubusercontent.com/70446049/127745092-415b42f6-da14-4dd5-81ab-31a2006e6b46.png)
+
+## Use getAllRGB() Method 
+```python
+#detail = True =>> Returns color and rgb code if detail parameter is true.
+#detail = False =>> If the parameter is False, the dictionary is returned.
+
+print(clr.getAllRGB(detail=False))
+
+#output _>
+
+{'ALICEBLUE': '240;248;255', 'ANTIQUEWHITE': '250;235;215', 'ANTIQUEWHITE1': '255;239;219', 'ANTIQUEWHITE2': '238;223;204', 'ANTIQUEWHITE3': '205;192;176', 'ANTIQUEWHITE4': '139;131;120'...'YELLOW2': '238;238;0', 'YELLOW3': '205;205;0', 'YELLOW4': '139;139;0'}
+
+print(clr.getAllRGB(detail=True))
+```
+> ### output getAllRGB > True _>
+>>![100](https://user-images.githubusercontent.com/70446049/127745753-0b2518cb-55d2-4110-8afb-b5ff4d2a8fad.png)
