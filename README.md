@@ -1,5 +1,3 @@
-[![syscolors](https://img.shields.io/pypi/v/syscolors?style=for-the-badge)](https://pypi.org/project/syscolors/)
-[![syscolors](https://img.shields.io/pypi/pyversions/syscolors?style=for-the-badge)](https://www.python.org/downloads/release/python-396/)
 [![syscolors](https://img.shields.io/github/repo-size/IMaresaLI/syscolors?style=for-the-badge)](https://pypi.org/project/syscolors/)
 [![syscolors](https://img.shields.io/pypi/l/proxyCheck-mp?style=for-the-badge)](https://github.com/IMaresaLI/syscolors/blob/lastversion/LICENSE) 
 # SysColors
