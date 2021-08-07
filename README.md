@@ -2,11 +2,12 @@
 [![syscolors](https://img.shields.io/pypi/pyversions/syscolors?style=for-the-badge)](https://www.python.org/downloads/release/python-396/)
 [![syscolors](https://img.shields.io/github/repo-size/IMaresaLI/syscolors?style=for-the-badge)](https://pypi.org/project/syscolors/)
 [![syscolors](https://img.shields.io/pypi/l/proxyCheck-mp?style=for-the-badge)](https://github.com/IMaresaLI/syscolors/blob/lastversion/LICENSE) 
-# SysColors
 
-# How to use ?
+# **SysColors**
 
-## 1-) Module Install and Import
+# **How to use ?**
+
+## **1-) Module Install and Import**
  - **Install Module**
 ```python
 pip install syscolors
@@ -19,18 +20,18 @@ pip3 install syscolors
 ```python
 from syscolors.sysColors import SystemColors
 ```
-## 2-) proxyController class must be called.
+## **2-) proxyController class must be called.**
 ```python
 clr = SystemColors()
 ```
-## 3-) Default colors and Font Formating
+## **3-) Default colors and Font Formating**
 ```python
 Colors = clr.red | clr.yellow | clr.blue | clr.green | clr.magenta | clr.black | clr.white 
 Background Colors  = clr.bgRed | clr.bgYellow | clr.bgBlue | clr.bgGreen | clr.bgBlack | clr.bgWhite
 Color Reset = clr.reset
 Font Formating = clr.bold | clr.underline | clr.reversed
 ```
-## 4-) Outputs
+## **4-) Outputs**
 
 |Code 					| Output|
 |-------------------------------	| -------------|
@@ -51,7 +52,7 @@ Font Formating = clr.bold | clr.underline | clr.reversed
 `print(clr.underline + "Font Style Underline")` | ![FontStyleUnderline](https://www.linkpicture.com/q/underline.png)
 `print(clr.reversed + "Font Style Reversed")` | ![FontStyleReversed](https://www.linkpicture.com/q/reversed.png)
 
-## 5-) setColor() and setBgClr() Methods
+## **5-) setColor() and setBgClr() Methods**
 ```python
 text = clr.setColor(35)
 print(text + "SetColor"+reset)
@@ -80,7 +81,7 @@ clr.getAllBgColor()
 > ### output4 _> 
 >> ![](https://www.linkpicture.com/q/Adsız_86.png)
 
-## 6-) RGBSetClr() and RGBSetBgClr() Methods
+## **6-) RGBSetClr() and RGBSetBgClr() Methods**
 ```python
 #Default RGB = "240;248;255" => Type(string) 
 
@@ -121,3 +122,30 @@ print(clr.getAllRGB(detail=True))
 ```
 > ### output getAllRGB > True _>
 >>![100](https://user-images.githubusercontent.com/70446049/127745753-0b2518cb-55d2-4110-8afb-b5ff4d2a8fad.png)
+
+## **7-) setHexColor() and setHexBg() Methods**
+```python
+#Default HexCode = "#B12345" => Type(string) 
+
+color = clr.setHexColor("#dc143c")
+print(color+"SetHexColor Method"+reset)
+
+
+color = clr.setHexBg("#dc143c")
+print(color+"SetHexBg Method"+reset)
+```
+> ### output SetHexColor _>
+>> ![11](https://user-images.githubusercontent.com/70446049/128612518-17224ef5-728d-49e0-a74e-76aed8d93a50.png)
+
+> ### output SetHexBg _>
+>> ![231](https://user-images.githubusercontent.com/70446049/128612524-3729ea65-b35a-4766-b8d9-7700f0ed77d7.png)
+
+## Use getAllHex() Method
+```python
+#Returns all hex color codes and colors.
+
+clr.getAllHex()
+
+#output _>
+```
+> ![Adsız](https://user-images.githubusercontent.com/70446049/128615556-794ceb7d-185e-4e20-8d48-3f83b2038cb4.png)
