@@ -1,5 +1,6 @@
-import sys
+import sys,os
 from syscolors.rgbColors import *
+os.system("color")
 
 class SystemColors:
     def __init__(self):
@@ -51,12 +52,12 @@ class SystemColors:
 
     def RGBSetClr(self,rgb="240;248;255"):
         """Returns the color of the rgb code you specify.\n
-        Default RGB = "240;248;255" => Type(string) \n"""
+        Default RGB = "240;248;255" => Type string \n"""
         return u"\u001b[38;2;{}m".format(rgb)
 
     def RGBSetBgClr(self,rgb="240;248;255"):
         """Returns the background color of the rgb code you specify.\n
-        Default RGB = "240;248;255" => Type(string) \n"""
+        Default RGB = "240;248;255" => Type string \n"""
         return u"\u001b[48;2;{}m".format(rgb)
 
     def getAllRGB(self,detail=False):
@@ -75,3 +76,38 @@ class SystemColors:
                 text = ""
         else :  
             return RgbColors
+
+    def setHexColor(self,hexCode="#B12345"):
+        """Returns the color of the hex code you specify.\n
+        Default hexCode = "#B12345" => Type string \n"""
+        hex = hexCode.lstrip('#')
+        lh = len(hex)
+        rgbCode = tuple(int(hex[i:i+lh//3], 16) for i in range(0, lh, lh//3))
+        return u"\u001b[38;2;{};{};{}m".format(rgbCode[0],rgbCode[1],rgbCode[2])
+
+    def setHexBg(self,hexCode="#B12345"):
+        """Returns the background color of the hex code you specify.\n
+        Default hexCode = "#B12345" => Type string \n"""
+        hex = hexCode.lstrip('#')
+        lh = len(hex)
+        rgbCode = tuple(int(hex[i:i+lh//3], 16) for i in range(0, lh, lh//3))
+        return u"\u001b[48;2;{};{};{}m".format(rgbCode[0],rgbCode[1],rgbCode[2])
+
+
+    def getAllHex(self):
+        """Returns all hex color codes and colors.\n
+        """       
+        keys = RgbColors.keys()
+        hexList = []
+        for i in keys :
+            splRgb = RgbColors[i].split(";")
+            string = '#%02x%02x%02x' % (int(splRgb[0]),int(splRgb[1]),int(splRgb[2]))
+            hexList.append(string)
+            text = ""
+            n = 0
+        for i in range(len(hexList)//10):
+            for j in range(10):
+                text+=self.setHexBg(hexList[n])+hexList[n]+" "
+                n+=1
+            print(text+self.reset)
+            text=""
