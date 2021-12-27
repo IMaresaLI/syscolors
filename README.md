@@ -35,9 +35,7 @@ Font Formating = clr.bold | clr.underline | clr.reversed
 
 |Code 					| Output|
 |-------------------------------	| -------------|
-`print(clr.red + "Red Color")` 	|  ![RedColor](https://www.linkpicture.com/q/red.png)
 `print(clr.yellow + "Yellow Color")` | ![YellowColor](https://www.linkpicture.com/q/yellow_1.png)
-`print(clr.blue + "Blue Color")` | ![BlueColor](https://www.linkpicture.com/q/blue.png)
 `print(clr.green + "Green Color")` | ![GreenColor](https://www.linkpicture.com/q/green_2.png)
 `print(clr.magenta + "Magenta Color")` | ![MagentaColor](https://www.linkpicture.com/q/green_3.png)
 `print(clr.black + "Black Color")` | ![BlackColor](https://www.linkpicture.com/q/2_395.png)
